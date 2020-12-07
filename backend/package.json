@@ -1,0 +1,39 @@
+{
+  "name": "simplified-youtube",
+  "version": "1.0.0",
+  "description": "ExpressJS based restful API's to let user upload videos, list videos and stream videos",
+  "main": "dist/app.js",
+  "scripts": {
+    "start": "tsc && node dist/app.js",
+    "test": "tsc && jest --forceExit dist/app.test.js"
+  },
+  "author": "Mayank Kushwaha",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/cors": "^2.8.8",
+    "@types/express": "^4.16.1",
+    "@types/mkdirp": "^1.0.1",
+    "@types/multer": "^1.4.4",
+    "nodemon": "^2.0.6",
+    "supertest": "^6.0.1",
+    "tslint": "^5.12.1",
+    "typescript": ">= 3.8.0"
+  },
+  "dependencies": {
+    "@types/fluent-ffmpeg": "^2.1.16",
+    "@types/jest": "^26.0.16",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "fluent-ffmpeg": "^2.1.2",
+    "generate-safe-id": "^1.0.3",
+    "jest": "^26.6.3",
+    "mkdirp": "^1.0.4",
+    "multer": "^1.4.2",
+    "node-json-db": "^1.1.0",
+    "slugify": "^1.4.6"
+  },
+  "resolutions": {
+    "jest-diff": "25.1.0",
+    "pretty-format": "25.1.0"
+  }
+}
