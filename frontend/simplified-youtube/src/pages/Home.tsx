@@ -17,7 +17,7 @@ export default function Home(): JSX.Element {
     const data = await fetch(URL)
     const dataJSON = await data.json()
     setLoading((curr) => (curr = false))
-    if(dataJSON.data)
+    if(dataJSON.data.length > 0)
     {
       return dispatch({
         type: 'FETCH_VIDEOS',
