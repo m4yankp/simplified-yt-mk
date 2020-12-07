@@ -54,7 +54,6 @@ export default function Upload(): JSX.Element {
   const resetForm = (): void => {
     setTitle('')
     setDescription('')
-    setVideoFile('')
   }
   return (
     <Container className="mt-3 mb-3">

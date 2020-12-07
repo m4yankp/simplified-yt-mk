@@ -3,17 +3,7 @@ import { IVideos, IAction } from './Interfaces';
 
 
 const initialState: IVideos = {
-   allVideos:{ "id":{
-        name: "",
-        duration: "",
-        size: "",
-        filePath: "",
-        mimeType: "",
-        thumbnailPath: "",
-        id: "",
-        description: "",
-        videoURL: "",
-    } }
+   allVideos:{}
 }
 
 export const Store = React.createContext<IVideos | any >(initialState);
