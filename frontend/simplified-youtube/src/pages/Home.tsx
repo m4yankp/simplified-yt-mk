@@ -12,19 +12,22 @@ export default function Home(): JSX.Element {
 
   // Fetch Videos Data
   const fetchVideosData = async () => {
-    setLoading((curr) => (curr = true))
-    const URL: string = `${API_URL}/allVideos`
-    const data = await fetch(URL)
-    const dataJSON = await data.json()
-    setLoading((curr) => (curr = false))
-    if(dataJSON.data.length > 0)
+    if(isNoVideo === false)
     {
-      return dispatch({
-        type: 'FETCH_VIDEOS',
-        payload: dataJSON.data,
-      })
-    } else {
-      setisNoVideo((curr) => curr = true);
+      setLoading((curr) => (curr = true))
+      const URL: string = `${API_URL}/allVideos`
+      const data = await fetch(URL)
+      const dataJSON = await data.json()
+      setLoading((curr) => (curr = false))
+      if(Object.keys(dataJSON.data).length >0 )
+      {
+        return dispatch({
+          type: 'FETCH_VIDEOS',
+          payload: dataJSON.data,
+        })
+      } else {
+        setisNoVideo((curr) => curr = true);
+      }
     }
   }
   useEffect(() => {
